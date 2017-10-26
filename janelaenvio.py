@@ -29,7 +29,7 @@ class InterfaceTK:
         #botão de enviar
         self.button = tk.Button(self.window, height = 1, width = 3, text = "Enviar")
         self.button.grid(row = 2, column = 0, sticky="sewn")
-        self.button.configure(command = self.Transmitter.send("gvdvgjacvgudasvgusavgydsvagudvsguavguadvugdsavhdsavhudasvuhdsvhdvhavdaskvjkdsvkasvkdvdavkasdvkasvdhsdvjvhdjsavhjds"))
+        self.button.configure(command = self.Transmitter.send())
 
 
     def run(self):

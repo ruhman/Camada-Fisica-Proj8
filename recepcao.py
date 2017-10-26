@@ -7,32 +7,39 @@ class Receptor():
         print("Inicializando socket TCP/IP")
 
         # Create a TCP/IP socket
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         # Bind the socket to the port
-        server_address = ('localhost', self.porta)
+        self.server_address = ('localhost', self.porta)
         print("Porta {}".format(self.porta))
-        sock.bind(server_address)
+        self.sock.bind(self.server_address)
 
         # Listen for incoming connections
-        sock.listen(1)
+        self.sock.listen(1)
 
         while True:
             # Wait for a connection
             print("waiting for a connection")
-            connection, client_address = sock.accept()
-            try:
-                print("connection from {}".format(client_address))
+            self.connection, self.client_address = self.sock.accept()
+            print("connection from {}".format(self.client_address))
+            string =''
 
-                # Receive the data in small chunks and retransmit it
-                while True:
-                    data = str(connection.recv(16))
-                    print("{}".format(data))
-                    if(len(data) <= 0):
-                        break
+            while True:
+                print('Listening...')
+                data = str(self.connection.recv(16),'utf-8')
+                print(data)
 
-            finally:
-                # Clean up the connection
-                connection.close()
+                if data == '+':
+                    print('Found head')
+
+                elif data == '=':
+                    print('Found EOP')
+                    print(string)
+                    
+
+                if data != '+' and data != '=':
+                    string += data
+
+        print(string)
 
 Receptor()
