@@ -19,9 +19,9 @@ class Receptor():
 
         while True:
             # Wait for a connection
-            print("waiting for a connection")
+            print("Esperando conexão")
             self.connection, self.client_address = self.sock.accept()
-            print("connection from {}".format(self.client_address))
+            print("Conexão de: {}".format(self.client_address))
             string =''
 
             while True:
@@ -30,16 +30,13 @@ class Receptor():
                 print(data)
 
                 if data == '+':
-                    print('Found head')
+                    print('Found Head')
 
                 elif data == '=':
                     print('Found EOP')
                     print(string)
-                    
 
                 if data != '+' and data != '=':
                     string += data
-
-        print(string)
-
+                    
 Receptor()
