@@ -22,7 +22,7 @@ class Receptor():
             print("waiting for a connection")
             connection, client_address = sock.accept()
             try:
-                print(" connection from {}".format(client_address))
+                print("connection from {}".format(client_address))
 
                 # Receive the data in small chunks and retransmit it
                 while True:
