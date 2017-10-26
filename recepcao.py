@@ -12,7 +12,6 @@ class Receptor():
 
         LeDoor = 1337
 
-
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_address = ("localhost", LeDoor)
         print("LeDoor {}".format(LeDoor))
@@ -24,17 +23,21 @@ class Receptor():
             print("Esperando conexão")
             connection, client_address = sock.accept()
 
-            try:
-                print(" Conectado {}".format(client_address))
-                while True:
-                    data = connection.recv(16)
-                    data = data.decode("utf-8")
+            string =''
 
-                    print("{}".format(data))
-                    if(len(data) <= 0):
-                        break
+            while True:
+                print('Listening...')
+                data = str(self.connection.recv(16),'utf-8')
+                print(data)
 
-            finally:
-                
-                connection.close()
+                if data == '+':
+                    print('Found Head')
+
+                elif data == '=':
+                    print('Found EOP')
+                    print(string)
+
+                if data != '+' and data != '=':
+                    string += data
+            
 
