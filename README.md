@@ -19,7 +19,7 @@ O sinal captado pelo receptor é transformado em bytes que são reconhecidos e c
 
 ## Frequencia de transmissão e bandas utilizadas
 
-Para o envio e receoção, foram utilizadas frequências de 2.2kHz, com banda igual a duas vezes a frequẽncia, ou seja, 4.4kHz.
+Para o envio e receoção, foi utilizada como frequência de corte 2.2kHz, com banda igual a duas vezes a esta, ou seja, 4.4kHz.
 
 ## Modulação BPSK
 
