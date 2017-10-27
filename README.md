@@ -66,16 +66,15 @@ Devido ao fato do sinal ter sido enviado em um meio não ideal, ocorreram interf
 
 ### Tempo e frequência do sinal demodulado
 
-(alterar abaixo)
-O primeiro gráfico exibe a modulação feita por BPSK e o segundo é a aplicação da Transformada de Fourier do mesmo. Devido ao fato da aplicação da modulação BPSK alterar a fase do sinal, a transformada faz com que apareçam 2 picos (sinal espelhado no ponto x = 0).
+Como foi dito anteriormente, o meio de transmissão não é ideal e isto causa interferência nos gráficos. Mesmo assim, possuem o mesmo formato que os graficos dos sinais enviados
 
-![3](img/graf2env.png) 
+![3](img/graf2rec.png) 
 
-![4](img/graf4env.png) 
+![4](img/graf4rec.png) 
 
 ### Gráfico de constelação
 
-Neste diagrama são exibidos os símbolos transmitidos.
+Com a modulação, os pontos dos gráficos estão concentrados em -1 e 1. Tais pontos representam os polos da modulação BSKP
 
-![5](img/graf5env.png) 
+![5](img/graf5rec.png) 
 
