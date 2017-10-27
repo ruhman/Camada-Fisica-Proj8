@@ -24,3 +24,16 @@ Para o envio e receoção, foram utilizadas frequências de 2.2kHz, com banda ig
 ## Modulação BPSK
 
 A modulação BPSK é realizada alterando a fase de um sinal e mantendo sua frequência e amplitude constantes.
+
+
+## Gráficos
+
+### Transmissão
+
+### Tempo e frequência do sinal codificado
+
+O primeiro gráfico mostra valores que variam entre -1 e 1, enquanto o segundo é uma aplicação da transformada de Fourier no sinal desse.
+
+![1](img/graf1env.png) 
+
+![2](img/graf3env.png) 
