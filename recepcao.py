@@ -27,7 +27,7 @@ class Receptor():
 
             while True:
                 print('Listening...')
-                data = str(self.connection.recv(16),'utf-8')
+                data = str(connection.recv(16),'utf-8')
                 print(data)
 
                 if data == '+':
