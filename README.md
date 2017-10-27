@@ -28,12 +28,54 @@ A modulação BPSK é realizada alterando a fase de um sinal e mantendo sua freq
 
 ## Gráficos
 
-### Transmissão
+## Transmissão
 
 ### Tempo e frequência do sinal codificado
 
-O primeiro gráfico mostra valores que variam entre -1 e 1, enquanto o segundo é uma aplicação da transformada de Fourier no sinal desse.
+O primeiro gráfico mostra valores que variam entre -1 e 1, enquanto o segundo é uma aplicação da transformada de Fourier no sinal desse. O ponto mais alto deste gráfico indica a frequência que mais contribuiu para a formação do sinal.
 
 ![1](img/graf1env.png) 
 
 ![2](img/graf3env.png) 
+
+### Tempo e frequência do sinal modulado
+
+O primeiro gráfico exibe a modulação feita por BPSK e o segundo é a aplicação da Transformada de Fourier do mesmo. Devido ao fato da aplicação da modulação BPSK alterar a fase do sinal, a transformada faz com que apareçam 2 picos (sinal espelhado no ponto x = 0).
+
+![3](img/graf2env.png) 
+
+![4](img/graf4env.png) 
+
+### Gráfico de constelação
+
+Neste diagrama são exibidos os símbolos transmitidos.
+
+![5](img/graf5env.png) 
+
+
+
+## Recepção
+
+### Tempo e frequência do sinal recebido
+
+Devido ao fato do sinal ter sido enviado em um meio não ideal, ocorreram interferências, fazendo com que o gráfico gerado permanecesse sua forma, porém com diversos ruidos ao longo de sua duração.
+
+![1](img/graf1rec.png) 
+
+![2](img/graf3rec.png) 
+
+### Tempo e frequência do sinal demodulado
+
+(alterar abaixo)
+O primeiro gráfico exibe a modulação feita por BPSK e o segundo é a aplicação da Transformada de Fourier do mesmo. Devido ao fato da aplicação da modulação BPSK alterar a fase do sinal, a transformada faz com que apareçam 2 picos (sinal espelhado no ponto x = 0).
+
+![3](img/graf2env.png) 
+
+![4](img/graf4env.png) 
+
+### Gráfico de constelação
+
+Neste diagrama são exibidos os símbolos transmitidos.
+
+![5](img/graf5env.png) 
+
