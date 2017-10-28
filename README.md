@@ -11,11 +11,11 @@ A modulação e demodulação são feitas no software GNU Radio enquanto a inter
 
 #### Envio do dado
 
-Após o usuário digitar uma mensagem na interface, o dado é enviado ao GNU Radio que, por sua vez, agrupa os bytes da mensagem e os transforma em um sinal.
+Após o usuário digitar uma mensagem na interface, o dado é empacotado (adicionamos '++++++++++++++++++' como Head e '==============' como EOP para evitar a perda do inicio da transmissao, que costuma ocorrer com os primeiros bytes enquanto o GNURadio "começa a ouvir", e facilitar a separação das mensagens) e então enviado ao GNURadio que, por sua vez, agrupa os bytes da mensagem e os transforma em um sinal.
 
 #### Recepção do dado
 
-O sinal captado pelo receptor é transformado em bytes que são reconhecidos e convertidos em strings. Caso ocorra alguma falha na transmissão, não há reenvio e o dado é perdido.
+O sinal captado pelo receptor é transformado em bytes que são reconhecidos e convertidos em strings. Essas strings são analisadas e desempacotadas, extraindo a mensagem. Caso ocorra alguma falha na transmissão, não há reenvio e o dado é perdido.
 
 ## Frequencia de transmissão e bandas utilizadas
 
